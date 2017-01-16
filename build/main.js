@@ -1,17 +1,20 @@
 var card = document.getElementById('card');
 var clickActive = false;
 var startX, startY;
-var currentXRotation = 0;
-var currentYRotation = 0;
+var currentXRotation = 0,
+    currentYRotation = 0;
+
 container.addEventListener('mousedown', function(e) {
   clickActive = true;
 
   startX = e.clientX;
   startY = e.clientY;
 });
+
 container.addEventListener('mouseup', function() {
   clickActive = false;
 });
+
 container.addEventListener('mousemove', function(e) {
   if (clickActive) {
     var moveX = e.clientX;
@@ -22,7 +25,7 @@ container.addEventListener('mousemove', function(e) {
 
     currentYRotation += xDisplacement/4;
     currentXRotation += yDisplacement/4;
-    //
+
     if (currentYRotation > 130) {
       currentYRotation = 130;
     }
