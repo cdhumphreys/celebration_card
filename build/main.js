@@ -31,8 +31,6 @@ container.addEventListener('mousemove', function(e) {
     }
 
     card.style.transform = "rotateY(" + currentYRotation + "deg) rotateX("+ currentXRotation +"deg)";
-    // card.style.transform = "rotate3d(0, 1, 0, "+currentYRotation+"deg)";
-    // card.style.transform = "rotate3d(1, 0, 0, "+currentXRotation+"deg)";
 
     startX = e.clientX;
     startY = e.clientY;
