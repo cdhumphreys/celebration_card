@@ -1,0 +1,104 @@
+#container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  background: rgba(0,0,0, 0.1);
+}
+
+#cardContainer {
+  position: absolute;
+  width: 1000px;
+  height: 100%;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+
+  perspective: 2000px;
+}
+#card {
+  width: 100%;
+  height: 50%;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+}
+
+.card_page {
+  position: absolute;
+  top: 0;
+
+  width: 500px;
+  height: 750px;
+
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+#card_page1 {
+  left: 0;
+  transform-origin: right;
+
+  transform: rotateY(60deg);
+}
+
+#card_page1:hover, #card_page2:hover + #card_page1 {
+
+
+  /*transform: rotateY(20deg);*/
+}
+
+
+#card_page2 {
+  right: 0;
+  transform-origin: left;
+
+}
+
+.card_face {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px black solid;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+#page1_outer {
+  transition: all 1s ease-in-out;
+  transform: rotateY(180deg);
+
+  background-image: url('https://images.unsplash.com/photo-1428509774491-cfac96e12253?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=');
+
+}
+
+#page1_inner {
+  transition: all 1s ease-in-out;
+
+  background: white;
+  border: 1px blue solid;
+
+  background-image: url('https://images.unsplash.com/photo-1471882108153-09c9b7452933?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=');
+
+}
+
+#page2_outer {
+  transition: all 1s ease-in-out;
+  transform: rotateY(180deg);
+
+  background-image: url('https://images.unsplash.com/photo-1428940253195-53483a1de2e6?dpr=1&auto=format&fit=crop&w=1500&h=1033&q=80&cs=tinysrgb&crop=');
+
+
+}
+
+#page2_inner {
+  transition: all 1s ease-in-out;
+  background: white;
+  border: 1px blue solid;
+
+  background-image: url('https://images.unsplash.com/photo-1466854076813-4aa9ac0fc347?dpr=1&auto=format&fit=crop&w=1500&h=844&q=80&cs=tinysrgb&crop=');
+}

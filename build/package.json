@@ -1,0 +1,8 @@
+{
+  "name": "CarouselTest",
+  "version": "1.0.0",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1"
+  }
+}
